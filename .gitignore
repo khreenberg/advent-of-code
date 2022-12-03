@@ -1,6 +1,3 @@
-input.txt
-*.iml
-
 ############
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,intellij+all,eclipse,vim,emacs,visualstudio,xcode
@@ -661,3 +658,8 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,intellij+all,eclipse,vim,emacs,visualstudio,xcode
+
+input.txt
+*.iml
+!*/src/bin/*
+

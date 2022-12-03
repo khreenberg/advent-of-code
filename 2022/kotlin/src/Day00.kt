@@ -12,9 +12,9 @@ abstract class Kotlin2022Template(private val day: Int) {
     fun run() {
         test()
         println("Tests passed.")
-        round1Result()
+        part1Result()
         try {
-            round2Result()
+            part2Result()
         } catch (e: NotImplementedError) {
             println("Round2: N/A")
         }
@@ -27,8 +27,8 @@ abstract class Kotlin2022Template(private val day: Int) {
         expected.getOrNull(1)?.let { assert(it, part2(test)) }
     }
 
-    fun round1Result() = println("Round1: ${part1(input)}")
-    fun round2Result() = println("Round2: ${part2(input)}")
+    private fun part1Result() = println("Part1 result: ${part1(input)}")
+    private fun part2Result() = println("Part2 result: ${part2(input)}")
 
 
     private fun <T> assert(expected: T, actual: T) =
