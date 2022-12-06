@@ -1,6 +1,6 @@
 import java.io.File
 
-class Day01 : Kotlin2022Template(1) {
+class Day01 : Kotlin2022Template<Long>(1) {
     private fun calories(file: File) =
         file.readLines().fold(mutableListOf<MutableList<Long>>(mutableListOf())) { acc, line ->
             acc.apply {

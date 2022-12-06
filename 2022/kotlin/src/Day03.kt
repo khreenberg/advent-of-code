@@ -11,7 +11,7 @@ private fun Iterable<Iterable<String>>.intersectItems() = map {
 private fun File.sumIntersection(chunkingStrategy: Iterable<String>.() -> Iterable<Iterable<String>>) =
     readLines().chunkingStrategy().intersectItems().sumOf(Char::priority)
 
-class Day03 : Kotlin2022Template(3) {
+class Day03 : Kotlin2022Template<Long>(3) {
     override fun part1(file: File) = file.sumIntersection { flatMap(String::halves).chunked(2) }
     override fun part2(file: File) = file.sumIntersection { chunked(3) }
 }

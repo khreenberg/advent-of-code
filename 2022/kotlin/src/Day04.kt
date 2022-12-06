@@ -5,7 +5,7 @@ private fun String.toRangePair() = split(",").let { (a, b) -> a.toRange() to b.t
 private fun IntRange.fullyContains(other: IntRange) = first <= other.first && last >= other.last
 private fun IntRange.partiallyContains(other: IntRange) = toSet().intersect(other.toSet()).isNotEmpty()
 
-class Day04 : Kotlin2022Template(4) {
+class Day04 : Kotlin2022Template<Long>(4) {
     private fun File.countOverlap(overlapPredicate: (Pair<IntRange, IntRange>) -> Boolean) = readLines()
         .map(String::toRangePair)
         .count(overlapPredicate)

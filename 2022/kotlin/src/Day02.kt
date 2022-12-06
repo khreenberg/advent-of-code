@@ -1,6 +1,6 @@
 import java.io.File
 
-class Day02 : Kotlin2022Template(2) {
+class Day02 : Kotlin2022Template<Long>(2) {
     sealed class Shape(val value: Int) : Comparable<Shape> {
         object Rock : Shape(1)
         object Paper : Shape(2)
